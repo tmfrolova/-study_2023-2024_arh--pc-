@@ -1,0 +1,137 @@
+---
+## Front matter
+title: "Лабораторная работа №9"
+subtitle: "Отчёт"
+author: "Фролова Татьяна Михайловна"
+
+## Generic otions
+lang: ru-RU
+toc-title: "Содержание"
+
+## Bibliography
+bibliography: bib/cite.bib
+csl: pandoc/csl/gost-r-7-0-5-2008-numeric.csl
+
+## Pdf output format
+toc: true # Table of contents
+toc-depth: 2
+lof: true # List of figures
+lot: true # List of tables
+fontsize: 12pt
+linestretch: 1.5
+papersize: a4
+documentclass: scrreprt
+## I18n polyglossia
+polyglossia-lang:
+  name: russian
+  options:
+	- spelling=modern
+	- babelshorthands=true
+polyglossia-otherlangs:
+  name: english
+## I18n babel
+babel-lang: russian
+babel-otherlangs: english
+## Fonts
+mainfont: IBM Plex Serif
+romanfont: IBM Plex Serif
+sansfont: IBM Plex Sans
+monofont: IBM Plex Mono
+mathfont: STIX Two Math
+mainfontoptions: Ligatures=Common,Ligatures=TeX,Scale=0.94
+romanfontoptions: Ligatures=Common,Ligatures=TeX,Scale=0.94
+sansfontoptions: Ligatures=Common,Ligatures=TeX,Scale=MatchLowercase,Scale=0.94
+monofontoptions: Scale=MatchLowercase,Scale=0.94,FakeStretch=0.9
+mathfontoptions:
+## Biblatex
+biblatex: true
+biblio-style: "gost-numeric"
+biblatexoptions:
+  - parentracker=true
+  - backend=biber
+  - hyperref=auto
+  - language=auto
+  - autolang=other*
+  - citestyle=gost-numeric
+## Pandoc-crossref LaTeX customization
+figureTitle: "Рис."
+tableTitle: "Таблица"
+listingTitle: "Листинг"
+lofTitle: "Список иллюстраций"
+lotTitle: "Список таблиц"
+lolTitle: "Листинги"
+## Misc options
+indent: true
+header-includes:
+  - \usepackage{indentfirst}
+  - \usepackage{float} # keep figures where there are in the text
+  - \floatplacement{figure}{H} # keep figures where there are in the text
+---
+
+# Цель работы
+
+ Изучить программирование с использованием циклов и обработки параметров 
+командной строки.
+
+# Задание
+1) Написать программу, использующую стек для хранения и извлечения данных;
+ 2) Описать назначение и синтаксис инструкций для организации циклов в NASM 
+(с примерами);
+ 3) Написать программу для вычисления факториала числа с помощью цикла;
+ 4) Написать программу, выводящую все переданные аргументы;
+ 5) Разработать программу, использующую циклы, стек и обработку аргументов 
+командной строки.
+
+
+# Выполнение лабораторной работы
+
+ 1. Открываем терминал,создаём в нём каталог lab08,после переходим в него и создаём 
+файл,нужный для работы .
+ Рис.1.1 Создание каталога,переход в него, создание файла.
+ Открывает файл и вводим туда Листинг 8.1
+ 
+Рис.1.2 Листинг 8.1
+ Создадим используемый файл и запустим его.
+ Рис.1.3 Создание используемого файла и его запуск.
+ Файл работает корректно.После внесём измения в файл.
+ 
+Рис.1.4 Изменения в файле lab8-1.asm.
+ Рис.1.5 Создание нового используемого файла и запуск.
+ Регистрт выдаёт ошибку и бесконечный ввод,что не соответвуует значению N.
+ Откроем файл и исправим ошибку.
+ Рис.1.6 Исправление ошибки в файле.
+ Создадим исполняемый файл и запускаем его .
+ 
+Рис.1.7 Создание исполняемого файла и запуск.
+ Теперь всё работает корректно. Число выводов совпадает с числом N.
+ 2. Создадим файл  lab8-2.asm и вводим туда Листинг 8.2
+ Рис.2.1 Листинг 8.2
+ Создаём используемый файл и запускаем его.
+ 
+Рис.2.2 Запуск файла.
+ Программа обрабатывает все 3 аргумента которые ввели, но в разных 
+вариантах.
+ Создадим файл lab8-3.asm ,введём туда Листинг 8.3
+ Рис.2.3 Листинг 8.3
+ Создаём используемый файл и  запускаем его.
+ 
+Рис.2.4 Создание и запуск файла lab8-3.asm
+ Внесём изменения в файл ,чтобы проиходило умножение.
+ Рис.2.5 Листин 8.3 с уможением.
+ Создадим используемый файл и запустим его.
+ 
+Рис.2.6 Создание и запуск используемого файла lab8-3 с умножением.
+
+#Задания для самостоятельной работы
+Создадим файл lab8-4.asm ,напишем туда листинг для решения функции варианта №8.
+ 
+Рис.3.1 Листинг 8.4
+ Создадм используемый файл и проверим его работу на нескольких вариантах x.
+ 
+Рис.3.2 Создание используемого файла и его запуск.
+ Рис.3.3 Проверка корректного выполения на нескольких варинтах.
+
+# Выводы
+
+ Освоили циклы и работу с аргументами командной строки в программировании
+
